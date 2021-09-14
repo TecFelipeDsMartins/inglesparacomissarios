@@ -8,6 +8,7 @@ const NavBar = () => {
   const toggle = () => {
       hidden == 'hidden' ? setHidden('') : setHidden('hidden')
       }
+    
     return(
     <>
     {/* navbar  */}
