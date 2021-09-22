@@ -2,14 +2,12 @@ import Head from 'next/head'
 
 import NavBar from '../components/NavBar'
 import CardMenu from '../components/CardMenu'
+import Footer from '../components/Footer'
 import CardOption from '../components/CardOption'
 import { FaCommentAlt, FaCommentDots, FaFacebook, FaFireExtinguisher, FaFirstAid,
          FaImage,
-         FaInstagram,
-         FaLinkedin,
          FaPlane, 
-         FaQuestionCircle, 
-         FaWhatsapp} from 'react-icons/fa'
+         FaQuestionCircle } from 'react-icons/fa'
 
 
 
@@ -29,8 +27,8 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap" rel="stylesheet" />      </Head>
-      <NavBar/>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap" rel="stylesheet" />      
+      </Head>
       <section className="h-auto sm:h-screen  flex flex-col justify-center content-center items-center " 
                style={{backgroundImage: 'url("img/aeroplane-aircraft-aircraft-wing-723240.jpg")',
                        backgroundAttachment: 'fixed',
@@ -92,20 +90,6 @@ export default function Home() {
           <p className="text-center leading-8 pl-5 pr-5" style={styles.urbanist}>“Hello, teacher. <br/> Tenho uma ótima notícia, <em>passei na Azul!</em> Me ligaram hoje pra avisar. Meu treinamento começa dia 10 e minha base ficou em BH. O Inglês, graças a vocês, foi tranquilo. Ela me fez algumas perguntas pessoais e uma sobre quais passageiros não podem sentar na saída de emergência. Depois me deu três situações: turbulência, aeroporto fechado por causa do tempo e iríamos pousar em VCP e a última era que iríamos fazer um pouso para reabastecimento. Consegui controlar o nervosismo e falei as situações.</p>
         </div>
       </section>
-      <footer className="flex flex-row justify-center justify-between p-3 text-white bg-blue-400 ">
-        <div className="sm:w-4/12 flex justify-center items-center">
-          <h4>Flyhigh</h4>
-        </div>
-        <div className="text-2xl flex flex-row justify-center content-around sm:w-4/12 ">
-          <i className="p-3  " hrf=""><FaFacebook /></i>
-          <i className="p-3 "><FaInstagram /></i>
-          <i className="p-3 "><FaLinkedin /></i>
-          <i className="p-3 "><FaWhatsapp /></i>
-        </div>
-        <div className="sm:w-4/12 flex justify-center">
-          <h5>created by<br/><em> Felipe Ds Martins</em></h5>
-        </div>
-      </footer>
     </>
   )
 }

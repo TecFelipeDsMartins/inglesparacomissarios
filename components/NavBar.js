@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from "react"
 import { FaPlaneDeparture } from 'react-icons/fa'
 
@@ -17,15 +18,18 @@ const NavBar = () => {
     <div className="flex justify-between">
       <div className="flex space-x-4">
         {/* logo */}
-        <div>
-          <a href="" className="flex items-center px-2 py-5 text-gray-700">
+        <Link href="/">
+          <a className="flex items-center px-2 py-5 text-gray-700">
             <FaPlaneDeparture/>      
             <span href="" className="mx-2 font-bold">FlyHigh</span>
           </a>
-        </div>
+        </Link>
         {/* primary nav */}
         <div className="hidden md:flex items-center space-x-1">
-          <a href="" className="py-5 px-3 hover:text-gray-600">Entrevistas</a>
+          <Link href="/BasicQuestions">
+            <a href="" className="py-5 px-3 hover:text-gray-600">Entrevistas</a>
+          </Link>
+          
           <a href="" className="py-5 px-3 hover:text-gray-600">Teste-online</a>
           <a href="" className="py-5 px-3 hover:text-gray-600">Gramática</a>
         </div>  
@@ -49,8 +53,11 @@ const NavBar = () => {
 
   {/* mobile menu */}
   <div className="md:hidden mobile-menu" className={hidden}>
-    <a href="#" className="block py-2 px-4 text-small hover:bg-gray-200">Features</a>
-    <a href="#" className="block py-2 px-4 text-small hover:bg-gray-200">Pricing</a>
+    <Link href="/BasicQuestions">
+      <a href="#" className="block py-2 px-4 text-small hover:bg-gray-200">Entrevistas</a>
+    </Link>
+    <a href="#" className="block py-2 px-4 text-small hover:bg-gray-200">Teste online</a>
+    <a href="#" className="block py-2 px-4 text-small hover:bg-gray-200">Gramática</a>
   </div>
 </nav>
 </>
