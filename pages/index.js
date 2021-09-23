@@ -1,8 +1,6 @@
 import Head from 'next/head'
 
-import NavBar from '../components/NavBar'
 import CardMenu from '../components/CardMenu'
-import Footer from '../components/Footer'
 import CardOption from '../components/CardOption'
 import { FaCommentAlt, FaCommentDots, FaFacebook, FaFireExtinguisher, FaFirstAid,
          FaImage,
@@ -37,12 +35,16 @@ export default function Home() {
                        backgroundBlendMode: 'multiply'}}>
         <h1 className="text-3xl sm:shadow-md mb-6 pb-11 pt-4 pl-3 pr-3  text-center w-full h-10 font-medium font-sans  text-white ">O melhor conteúdo para se tornar um comissário de bordo</h1>                 
         <div className="container flex flex-col sm:flex-row justify-center content-center p-10 w-11/12  h-5/6" >
-          <CardMenu name="Entrevista"
-                img='url("img/businessmen-businesspeople-businesswomen-1249158.jpg")'/>
-          <CardMenu name="teste online"
-                img='url("img/desk-email-laptop-7112.jpg")'/>
-          <CardMenu name="Gramática"
-                img='url("img/abc-alphabet-blackboard-265076.jpg")'/>          
+          <CardMenu 
+              name="Entrevista"
+              url="/BasicQuestions"
+              img='url("img/businessmen-businesspeople-businesswomen-1249158.jpg")'/>
+          <CardMenu 
+              name="teste online"
+              img='url("img/desk-email-laptop-7112.jpg")'/>
+          <CardMenu 
+              name="Gramática"
+              img='url("img/abc-alphabet-blackboard-265076.jpg")'/>          
         </div>
       </section>
       <section className="h-auto  flex flex-col justify-center bg-white">

@@ -1,7 +1,37 @@
+import { useState, useEffect } from 'react'
 import Link from "next/link";
+import Prismic from "prismic-javascript"
+
+const BasicQuestions = ({basicQuestions}) => {
+  const [ questAndAnsIdx, setQuestAndAnsIdx ] = useState(0)
+  const [ questions, setQuestions ] = useState([])
+  const [ answer, setAnswer ] = useState([])
+  const [ atualQuestions, setAtualQuestions ] = useState(null)
+  const [ atualAnswer, setAtualAnswer ] = useState(1)
+
+  useEffect(() => {
+    basicQuestions.map((quest)=>{
+      setQuestions((old)=>[quest.data.textQuestion, ...old])
+      setAnswer((old)=>[quest.data.answer, ...old])
+    })
+  },[]);
+
+  const handleOnNextClick = () => {
+    if(questAndAnsIdx < questions.length - 1){
+      setQuestAndAnsIdx((old)=> old + 1)
+      setAtualQuestions(old => old = questions[questAndAnsIdx])
+    }
+  }
+
+  const handleOnPrevClick = () => {
+    if(questAndAnsIdx > 0){
+      setQuestAndAnsIdx((old)=> old - 1)
+      setAtualQuestions(old => old = questions[questAndAnsIdx])
+    }
+  }
 
 
-const BasicQuestions = () => {
+
   return ( 
     <>
       <section className="h-screen  flex flex-col justify-center content-center items-center " 
@@ -10,7 +40,7 @@ const BasicQuestions = () => {
                        backgroundSize: 'cover',
                        backgroundColor: 'rgba(0,0,0,0.7)',
                        backgroundBlendMode: 'multiply'}}>
-        <div className="container w-10/12 flex flex-row justify-center items-center justify-around pb-3 ">                 
+        <div className="container w-10/12 flex flex-row items-center justify-around pb-3 ">                 
           <Link href="/BasicQuestions">
             <a className="text-center text-white border-2 w-4/12 rounded-md ml-2 mr-2  ">Basic</a>
           </Link>
@@ -22,11 +52,31 @@ const BasicQuestions = () => {
           </Link>  
         </div>
         <div className="w-10/12 h-5/6  border-2 rounded-md">
-
+          <div className="flex flex-row justify-center items-center text-lg pt-4">
+            <span className="text-center text-white">{questAndAnsIdx + 1}.</span>
+            <p className="text-center text-white inline">{questions[questAndAnsIdx]}</p> 
+          </div>
+          <div className="flex flex-row justify-center items-center text-lg pt-4">
+            <p className="text-center text-white inline">{answer[questAndAnsIdx]}</p> 
+          </div>
+          <div className="flex flex-row justify-center items-center text-lg pt-4 text-white">
+            <button onClick={handleOnPrevClick} className="border-2 pl-2 pr-2 ml-3 mr-3 rounded-md">prev</button>
+            <button onClick={handleOnNextClick} className="border-2 pl-2 pr-2 ml-3 mr-3 rounded-md">next</button>
+          </div>
         </div>                    
       </section>
     </>
    );
+}
+
+export async function getServerSideProps({ res }){
+  const client = Prismic.client('https://testeflyhigh.prismic.io/api/v2')
+  const basicQuestions = await client.query(Prismic.Predicates.at('document.type', 'basic-questions'))
+  return {
+    props:{
+      basicQuestions: basicQuestions.results,
+    },
+  }
 }
  
 export default BasicQuestions;
