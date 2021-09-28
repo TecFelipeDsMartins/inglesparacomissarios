@@ -52,12 +52,12 @@ export default function Home() {
           <h2 className="text-3xl mb-4 mt-6 pr-4 pl-4">Chegou a sua vez de se tornar um comissário(a)!</h2>
           <p className="sm:pl-60 sm:pr-60 text-center text-xl text-gray-600   mt-5 mb-5">Curso completo preparatório para entrevistas das Companhias Aéreas. Simulado para responder em inglês todo o tipo de questionamento que cai nas provas. Aqui você vai aprender como responder:</p>
         </div>
-        <div className="flex flex-col sm:flex-row content-start">
+        <div className="flex flex-col items-center sm:flex-row content-start">
           <CardOption icon={<FaPlane />} text="Resolver Situações de Bordo: mais de 70 situações reais de voo"/>
           <CardOption icon={<FaQuestionCircle />} text="Perguntas Pessoais: mais de 500 questões utilizadas em Seleções"/>
           <CardOption icon={<FaFirstAid />} text="Emergências de Bordo: como proceder corretamente nas emergências"/>
         </div>
-        <div className="flex flex-col sm:flex-row content-start items-start">
+        <div className="flex flex-col items-center sm:flex-row content-start sm:items-start">
           <CardOption icon={<FaFireExtinguisher />} text="Equipamentos de Emergência: descubra como explicar em inglês a utilização de cada equipamento"/>
           <CardOption icon={<FaCommentAlt />} text="Speeches atualizados: pronúncia, leitura e entonação correta"/>
           <CardOption icon={<FaImage />} text="Descrição de gravuras em inglês"/>
@@ -88,8 +88,8 @@ export default function Home() {
             fontFamily: "Lobster",
             fontWeight: 100}}
             >Confira o depoimento <br/>de uma aluna que já fez o curso:</h3>
-        <div className="flex flex-col justify-center items-center sm:w-6/12 w-96 h-5/6  bg-white sm:pr-20  sm:pl-20 sm:p-10 pl-3 pr-3 pt-4 pb-4 transform -rotate-3 shadow-md ">
-          <p className="text-center leading-8 pl-5 pr-5" style={styles.urbanist}>“Hello, teacher. <br/> Tenho uma ótima notícia, <em>passei na Azul!</em> Me ligaram hoje pra avisar. Meu treinamento começa dia 10 e minha base ficou em BH. O Inglês, graças a vocês, foi tranquilo. Ela me fez algumas perguntas pessoais e uma sobre quais passageiros não podem sentar na saída de emergência. Depois me deu três situações: turbulência, aeroporto fechado por causa do tempo e iríamos pousar em VCP e a última era que iríamos fazer um pouso para reabastecimento. Consegui controlar o nervosismo e falei as situações.</p>
+        <div className="flex flex-col justify-center items-center md:w-8/12 sm:w-6/12 w-72  h-5/6  bg-white sm:pr-20  sm:pl-20 sm:p-10 pl-3 pr-3 pt-4 pb-4 transform -rotate-3 shadow-md ">
+          <p className="text-center leading-6 pl-5 pr-5 font-sans md:text-lg  ">“Hello, teacher. <br/> Tenho uma ótima notícia, <em>passei na Azul!</em> Me ligaram hoje pra avisar. Meu treinamento começa dia 10 e minha base ficou em BH. O Inglês, graças a vocês, foi tranquilo. Ela me fez algumas perguntas pessoais e uma sobre quais passageiros não podem sentar na saída de emergência. Depois me deu três situações: turbulência, aeroporto fechado por causa do tempo e iríamos pousar em VCP e a última era que iríamos fazer um pouso para reabastecimento. Consegui controlar o nervosismo e falei as situações.</p>
         </div>
       </section>
     </>
