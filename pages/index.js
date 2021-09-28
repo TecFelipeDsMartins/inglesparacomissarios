@@ -89,7 +89,7 @@ export default function Home() {
             fontWeight: 100}}
             >Confira o depoimento <br/>de uma aluna que já fez o curso:</h3>
         <div className="flex flex-col justify-center items-center md:w-8/12 sm:w-6/12 w-72  h-5/6  bg-white sm:pr-20  sm:pl-20 sm:p-10 pl-3 pr-3 pt-4 pb-4 transform -rotate-3 shadow-md ">
-          <p className="text-center leading-6 pl-5 pr-5 font-sans md:text-lg  ">“Hello, teacher. <br/> Tenho uma ótima notícia, <em>passei na Azul!</em> Me ligaram hoje pra avisar. Meu treinamento começa dia 10 e minha base ficou em BH. O Inglês, graças a vocês, foi tranquilo. Ela me fez algumas perguntas pessoais e uma sobre quais passageiros não podem sentar na saída de emergência. Depois me deu três situações: turbulência, aeroporto fechado por causa do tempo e iríamos pousar em VCP e a última era que iríamos fazer um pouso para reabastecimento. Consegui controlar o nervosismo e falei as situações.</p>
+          <p className="text-center leading-6 pl-5 pr-5 font-sans md:text-lg ">“Hello, teacher. <br/> Tenho uma ótima notícia, <em>passei na Azul!</em> Me ligaram hoje pra avisar. Meu treinamento começa dia 10 e minha base ficou em BH. O Inglês, graças a vocês, foi tranquilo. Ela me fez algumas perguntas pessoais e uma sobre quais passageiros não podem sentar na saída de emergência. Depois me deu três situações: turbulência, aeroporto fechado por causa do tempo e iríamos pousar em VCP e a última era que iríamos fazer um pouso para reabastecimento. Consegui controlar o nervosismo e falei as situações.</p>
         </div>
       </section>
     </>
