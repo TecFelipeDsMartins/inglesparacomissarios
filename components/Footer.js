@@ -8,14 +8,14 @@ const Footer = () => {
       <div className="sm:w-4/12 flex justify-center items-center">
         <h4>Flyhigh</h4>
       </div>
-      <div className="text-2xl flex flex-row justify-center content-around sm:w-4/12 ">
-        <i className="p-3  " hrf=""><FaFacebook /></i>
-        <i className="p-3 "><FaInstagram /></i>
-        <i className="p-3 "><FaLinkedin /></i>
-        <i className="p-3 "><FaWhatsapp /></i>
+      <div className="text-xl sm:text-2xl flex flex-row justify-center sm:content-around  sm:w-4/12 ">
+        <i className="p-2 sm:p-3 "><FaFacebook /></i>
+        <i className="p-2 sm:p-3 "><FaInstagram /></i>
+        <i className="p-2 sm:p-3 "><FaLinkedin /></i>
+        <i className="p-2 sm:p-3 "><FaWhatsapp /></i>
       </div>
-      <div className="sm:w-4/12 flex justify-center">
-        <h5>created by<br/><em> Felipe Ds Martins</em></h5>
+      <div className="sm:w-4/12 flex justify-end">
+        <h5 className="text-sm text-center" >created by<br/><em> Felipe Ds Martins</em></h5>
       </div>
     </footer>
    );

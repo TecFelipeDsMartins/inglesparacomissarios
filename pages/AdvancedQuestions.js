@@ -10,15 +10,15 @@ const BasicQuestions = () => {
                        backgroundSize: 'cover',
                        backgroundColor: 'rgba(0,0,0,0.7)',
                        backgroundBlendMode: 'multiply'}}>
-        <div className="container w-10/12 flex flex-row justify-center items-center justify-around pb-3 ">                 
+        <div className="container w-10/12 flex flex-row  items-center justify-around pb-3 text-xs sm:text-sm">                 
           <Link href="/BasicQuestions">
-            <a className="text-center text-gray-400 border-2 w-4/12 rounded-md ml-2 mr-2 bg-gray-900 ">Basic</a>
+            <a className="text-center text-gray-400 border-2 w-4/12 rounded-md  py-1 mx-2 bg-gray-900 ">Basic</a>
           </Link>
           <Link href="/IntermediateQuestions">
-            <a className="text-center text-gray-400  border-2 w-4/12 rounded-md ml-2 mr-2 bg-gray-900">Intermediate</a>
+            <a className="text-center text-gray-400  border-2 w-4/12 rounded-md  py-1 mx-3 bg-gray-900">Intermediate</a>
           </Link>
           <Link href="/AdvancedQuestions">
-            <a className="text-center text-white border-2 w-4/12 rounded-md ml-2 mr-2">Advanced</a>  
+            <a className="text-center text-white border-2 w-4/12 rounded-md py-1 mx-2">Advanced</a>  
           </Link>  
         </div>
         <div className="w-10/12 h-5/6  border-2 rounded-md">
