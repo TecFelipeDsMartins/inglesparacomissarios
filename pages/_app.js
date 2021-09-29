@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime'
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout'
 import '../styles/global.css'
