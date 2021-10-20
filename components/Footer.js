@@ -4,7 +4,7 @@ import {
 
 const Footer = () => {
   return ( 
-    <footer className="flex flex-row justify-center justify-between p-3 text-white bg-blue-400 ">
+    <footer className="flex flex-row justify-between p-3 text-white bg-blue-400 ">
       <div className="sm:w-4/12 flex justify-center items-center">
         <h4>Flyhigh</h4>
       </div>
@@ -15,7 +15,7 @@ const Footer = () => {
         <i className="p-2 sm:p-3 "><FaWhatsapp /></i>
       </div>
       <div className="sm:w-4/12 flex justify-end">
-        <h5 className="text-sm text-center" >created by<br/><em> Felipe Ds Martins</em></h5>
+        <a className="text-sm text-center" >created by<br/><em> Felipe Ds Martins</em></a>
       </div>
     </footer>
    );

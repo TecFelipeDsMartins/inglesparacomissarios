@@ -58,20 +58,20 @@ const BasicQuestions = ({basicQuestions}) => {
             <a className="text-center text-gray-400 border-2 w-4/12 rounded-md py-1 mx-2 bg-gray-900">Advanced</a>  
           </Link>  
         </div>
-        <div className="flex flex-col md:px-64 justify-between items-center w-10/12 h-5/6  border-2 rounded-md">
+        <div className="h-auto flex flex-col md:px-64 justify-between items-center w-10/12 sm:h-5/6  border-2 rounded-md">
           <div className="flex flex-row justify-center items-start text-lg pt-4 m-3 h-24 ">
             <span className="text-center text-white text-base">{questAndAnsIdx + 1}.</span>
             <p className="text-center text-white inline text-base">{questions[questAndAnsIdx]}</p> 
           </div>
           <Mic />
           <div className="flex flex-col justify-center items-center text-md pt-4 w-full md:px-3">
-            <button className="text-gray-300 border border-b-0 w-5/6 md:w-full" onClick={()=> setAnswerHiddenStatus(!answerHiddenStatus)}>Simple Answer</button>
+            <button className="text-gray-300 border border-b-0 w-5/6 md:w-full" onClick={()=> setAnswerHiddenStatus(!answerHiddenStatus)}>Resposta básica</button>
             {answerHiddenStatus && (
-              <p className="md:w-full text-center text-white inline p-3 bg-gray-800 border border-t-0 rounded rounded-tr-none rounded-tl-none w-5/6">{answer[questAndAnsIdx]}</p>)
+              <p className="md:w-full text-center text-white font-light inline p-3 bg-gray-900 border border-t-0 rounded rounded-tr-none rounded-tl-none w-5/6">{answer[questAndAnsIdx]}</p>)
             } 
-            <button className="text-gray-300 border w-5/6 md:w-full" onClick={()=> setAnswerHiddenStatus2(!answerHiddenStatus2)}>Advanced Answer</button>
+            <button className="text-gray-300 border w-5/6 md:w-full" onClick={()=> setAnswerHiddenStatus2(!answerHiddenStatus2)}>Resposta avançada</button>
             {answerHiddenStatus2 && (
-              <p className="md:w-full text-center text-white inline p-3 bg-gray-800 border border-t-0 rounded rounded-tr-none rounded-tl-none w-5/6">{answer2[questAndAnsIdx]}</p>)
+              <p className="md:w-full text-center text-white font-light inline p-3 bg-gray-900 border border-t-0 rounded rounded-tr-none rounded-tl-none w-5/6">{answer2[questAndAnsIdx]}</p>)
             } 
           </div>
           <div className="flex flex-row justify-center items-center text-lg pt-4 text-white m-3 w-full">
@@ -85,7 +85,7 @@ const BasicQuestions = ({basicQuestions}) => {
 }
 
 export async function getServerSideProps({ res }){
-  const client = Prismic.client('https://testeflyhigh.prismic.io/api/v2')
+  const client = Prismic.client('https://inglesparacomissarios.prismic.io/api/v2')
   const basicQuestions = await client.query(Prismic.Predicates.at('document.type', 'basic-questions'))
   return {
     props:{
